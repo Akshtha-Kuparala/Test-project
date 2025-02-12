@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Video Streaming Platform</title>
     <style>
-        /* Import custom font */
+        /* Custom font import */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -36,13 +36,11 @@
         .navbar h1 {
             margin: 0;
             font-size: 22px;
-            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
             gap: 20px;
-            align-items: center;
         }
 
         .nav-links a {
@@ -55,7 +53,6 @@
             padding: 5px;
             border-radius: 5px;
             border: none;
-            width: 150px;
         }
 
         /* Sidebar */
@@ -70,7 +67,6 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .sidebar a {
@@ -105,10 +101,6 @@
             border-radius: 8px;
             transition: 0.3s;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
         }
 
         .video-box:hover {
@@ -119,31 +111,19 @@
         .video-box video {
             width: 100%;
             border-radius: 5px;
-            transition: opacity 0.3s ease-in-out;
             opacity: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
+            transition: opacity 0.3s ease-in-out;
         }
 
         .video-box:hover video {
             opacity: 1;
-        }
-
-        .video-box img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .video-info {
-            padding: 10px 0;
+            autoplay: true;
         }
 
         .video-title {
-            font-size: 16px;
-            font-weight: bold;
             color: white;
-            margin: 5px 0;
+            font-size: 16px;
+            margin-top: 10px;
         }
 
         .video-details {
@@ -151,7 +131,7 @@
             color: #b0b0b0;
         }
 
-        /* Responsive Design */
+        /* Hide Sidebar on Mobile */
         @media (max-width: 768px) {
             .sidebar {
                 display: none;
@@ -161,14 +141,6 @@
                 margin-left: 0;
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .nav-links {
-                gap: 10px;
-            }
-
-            .search-bar {
-                width: 100px;
             }
         }
     </style>
@@ -193,30 +165,19 @@
 
     <div class="video-section">
         <div class="video-box">
-            <video src="Untitled video - Made with Clipchamp (3).mp4" muted loop poster="CSSAnimations.png"></video>
-            <img src="CSSAnimations.png" alt="CSS Animations">
-            <div class="video-info">
-                <p class="video-title">CSS Animations</p>
-                <p class="video-details">Learn about CSS animation properties and smooth transitions.</p>
-            </div>
+            <video src="video1.mp4" muted loop></video>
+            <p class="video-title">CSS Animations</p>
+            <p class="video-details">Learn about CSS animation properties and smooth transitions.</p>
         </div>
-
         <div class="video-box">
-            <video src="https://www.youtube.com/watch?v=Ddc-IIrIot0&pp=ygUJI2NvcmVzY3Nz" muted loop poster="thumbnail2.jpg"></video>
-            <img src="thumbnail2.jpg" alt="CSS Colors">
-            <div class="video-info">
-                <p class="video-title">CSS Colors</p>
-                <p class="video-details">Understand color theory and how to use it in CSS.</p>
-            </div>
+            <video src="video2.mp4" muted loop></video>
+            <p class="video-title">CSS Colors</p>
+            <p class="video-details">Understand color theory and how to use it in CSS.</p>
         </div>
-
         <div class="video-box">
-            <video src="https://www.youtube.com/watch?v=yU7jJ3NbPdA" muted loop poster="thumbnail3.jpg"></video>
-            <img src="thumbnail3.jpg" alt="CSS Responsiveness">
-            <div class="video-info">
-                <p class="video-title">CSS Responsiveness</p>
-                <p class="video-details">Make your web pages responsive with media queries.</p>
-            </div>
+            <video src="video3.mp4" muted loop></video>
+            <p class="video-title">CSS Responsiveness</p>
+            <p class="video-details">Make your web pages responsive with media queries.</p>
         </div>
     </div>
 </body>
